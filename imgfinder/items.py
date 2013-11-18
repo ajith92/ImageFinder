@@ -16,7 +16,8 @@ class ImgfinderItem(Item):
     # define the fields for your item here like:
     # name = Field()
     img_parenturl = Field()
-    img_url = Field(input_processor=MapCompose(urljoin),)
+    image_urls = Field(input_processor=MapCompose(urljoin),)
+    images = Field()
     #img_parenturl_referer = Field()
     #img_parenturl_children = Field()
     #pass

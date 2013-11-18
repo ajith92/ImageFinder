@@ -26,3 +26,12 @@ DOWNLOADER_MIDDLEWARES = {
                             'scrapy.contrib.downloadermiddleware.redirect.RedirectMiddleware': 123,
                          }
 
+ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+
+IMAGES_STORE = 'imgfinder/images/'
+
+# 90 days of delay for image expiration
+IMAGES_EXPIRES = 90
+
+IMAGES_MIN_HEIGHT = 4
+IMAGES_MIN_WIDTH = 4

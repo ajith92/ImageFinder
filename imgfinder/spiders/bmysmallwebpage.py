@@ -20,7 +20,7 @@ class BmysmallwebpageSpider(BaseSpider):
         referer_url = response.request.headers.get('referer', None)
         
         l.add_value('img_parenturl', current_url)
-        l.add_xpath('img_url', '//img/@src')
+        l.add_xpath('image_urls', '//img/@src')
         
         yield l.load_item()
 
